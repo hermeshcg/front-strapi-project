@@ -1,22 +1,19 @@
-import './App.css';
+import Routes from './routes';
+import GlobalStyle from './styles/Global';
+import { ToastContainer, Bounce } from 'react-toastify';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <ToastContainer
+        autoClose={3500}
+        position="top-right"
+        limit={5}
+        transition={Bounce}
+      />
+      <Routes />
+    </>
   );
 }
 
