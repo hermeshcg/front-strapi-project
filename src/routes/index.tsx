@@ -1,13 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
 
+import Home from '../Pages/Home';
 import Login from '../Pages/Login';
-import Home from '../Pages/Admin/Home';
+import Post from '../Pages/Post';
+import HomeAdmin from '../Pages/Admin/Home';
 
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/admin" element={<Home />} />
+      <Route path="/" index element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/post/:id" element={<Post />} />
+      <Route path="/admin" element={<HomeAdmin />} />
     </Routes>
   );
 }
