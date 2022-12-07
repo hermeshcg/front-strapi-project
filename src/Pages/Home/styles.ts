@@ -16,17 +16,4 @@ export const Container = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 30px;
   }
-  .loading {
-    margin: 100px;
-    animation: spin 1s linear infinite;
-    background-color: black;
-  }
-  @keyframes spin {
-    0% {
-      transform: rotateZ(0deg);
-    }
-    100% {
-      transform: rotateZ(360deg);
-    }
-  }
 `;

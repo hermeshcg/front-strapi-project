@@ -15,6 +15,7 @@ export const Container = styled.div`
     margin: 20px;
     justify-content: center;
     background: #ddd;
+    text-decoration: none;
     img {
       width: 100%;
       height: 150px;
@@ -30,16 +31,15 @@ export const Container = styled.div`
     h3 {
       color: hsl(200, 15%, 8%);
       margin: 10px 0;
+      padding-bottom: 16px;
     }
-    strong {
+    span {
       padding-bottom: 10px;
-      color: hsl(200, 15%, 8%);
-
-      span {
-        color: hsl(200, 15%, 8%);
-      }
+      color: #333;
+      align-self: flex-start;
+      margin-left: 16px;
     }
-    transition: transform 0.2s; /* Animation */
+    transition: transform 0.2s;
   }
   .post-card:hover {
     transform: scale(1.1);

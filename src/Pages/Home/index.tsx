@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { toast } from 'react-toastify';
-import Header from '../../components/Header';
+import Loading from '../../components/Loading';
 import api from '../../services/api';
 import Posts from './Posts';
 import { Container } from './styles';
@@ -42,10 +41,8 @@ const Home: React.FC = () => {
         });
       });
   }, []);
-  console.log(posts);
   return (
     <Container>
-      <Header />
       <h1>POSTS</h1>
       {!isLoading ? (
         <div className="posts-container">
@@ -68,7 +65,7 @@ const Home: React.FC = () => {
           ))}
         </div>
       ) : (
-        <AiOutlineLoading3Quarters className="loading" size={36} />
+        <Loading />
       )}
     </Container>
   );
