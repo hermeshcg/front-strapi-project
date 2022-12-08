@@ -8,7 +8,12 @@ interface Props {
 }
 
 const Card = ({ title, cover, category, content }: Props) => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <h1>{title}</h1>
+      <p>{content}</p>
+    </Container>
+  );
 };
 
 export default Card;

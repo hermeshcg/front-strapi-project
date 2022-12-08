@@ -17,14 +17,14 @@ interface PostIF {
         attributes: {
           name: string;
         };
-      };
+      } | null;
     };
     cover?: {
       data: {
         attributes: {
           url: string;
         };
-      };
+      } | null;
     };
   };
 }
@@ -56,6 +56,8 @@ const Posts: React.FC = () => {
     return;
   }, [id]);
 
+  console.log('post', post);
+
   return (
     <>
       <Header />
@@ -66,12 +68,12 @@ const Posts: React.FC = () => {
             content={post!.attributes.content}
             category={
               post!.attributes.category?.data !== undefined
-                ? post?.attributes.category?.data.attributes.name
+                ? post?.attributes.category?.data?.attributes.name
                 : ''
             }
             cover={
-              post!.attributes.cover?.data !== undefined
-                ? post?.attributes.cover?.data.attributes.url
+              post!.attributes.cover!.data !== undefined
+                ? post!.attributes.cover?.data?.attributes.url
                 : ''
             }
           />
