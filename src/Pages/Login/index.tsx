@@ -13,7 +13,6 @@ const Login: React.FC = () => {
     api
       .post('/auth/local', form)
       .then((res) => {
-        console.log(res);
         if (res.status === 200) {
           toast.success('Welcome', {
             position: 'top-right',
@@ -24,7 +23,8 @@ const Login: React.FC = () => {
             progress: undefined,
             theme: 'dark',
           });
-          localStorage.setItem('@bearer', res.data.jwt);
+          sessionStorage.setItem('@bearer', res.data.jwt);
+          sessionStorage.setItem('@isLogged', 'true');
           return navigate('/admin');
         }
       })

@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { Container } from './styles';
 
 const Header: React.FC = () => {
+  const isLogged = sessionStorage.getItem('@isLogged') === 'true';
+  function logout() {
+    sessionStorage.clear();
+  }
   return (
     <Container>
       <div
@@ -19,9 +23,15 @@ const Header: React.FC = () => {
         </Link>
       </div>
       <div>
-        <Link to="/login" className="sign-in-btn">
-          Sign in
-        </Link>
+        {isLogged ? (
+          <Link to="/" onClick={logout} className="sign-in-btn">
+            Sign out
+          </Link>
+        ) : (
+          <Link to="/login" className="sign-in-btn">
+            Sign in
+          </Link>
+        )}
       </div>
     </Container>
   );

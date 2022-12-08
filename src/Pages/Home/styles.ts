@@ -4,9 +4,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
   min-width: 100vw;
-  background-color: #d3d3d3;
+  min-height: 100vh;
+  background-color: #ccffff;
+  padding: 50px 0;
   h1 {
     margin: 26px;
     align-self: flex-start;

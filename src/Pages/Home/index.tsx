@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import Header from '../../components/Header';
 import Loading from '../../components/Loading';
 import api from '../../services/api';
 import Posts from './Posts';
@@ -42,32 +43,35 @@ const Home: React.FC = () => {
       });
   }, []);
   return (
-    <Container>
-      <h1>POSTS</h1>
-      {!isLoading ? (
-        <div className="posts-container">
-          {posts!.map((post) => (
-            <Posts
-              key={post.id}
-              id={post.id}
-              title={post.attributes.title}
-              cover={
-                post.attributes.cover.data?.attributes.url !== undefined
-                  ? post.attributes.cover.data?.attributes.url
-                  : ''
-              }
-              category={
-                post.attributes.category.data?.attributes.name !== undefined
-                  ? post.attributes.category.data?.attributes.name
-                  : ''
-              }
-            />
-          ))}
-        </div>
-      ) : (
-        <Loading />
-      )}
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <h1>POSTS</h1>
+        {!isLoading ? (
+          <div className="posts-container">
+            {posts!.map((post) => (
+              <Posts
+                key={post.id}
+                id={post.id}
+                title={post.attributes.title}
+                cover={
+                  post.attributes.cover.data?.attributes.url !== undefined
+                    ? post.attributes.cover.data?.attributes.url
+                    : ''
+                }
+                category={
+                  post.attributes.category.data?.attributes.name !== undefined
+                    ? post.attributes.category.data?.attributes.name
+                    : ''
+                }
+              />
+            ))}
+          </div>
+        ) : (
+          <Loading />
+        )}
+      </Container>
+    </>
   );
 };
 

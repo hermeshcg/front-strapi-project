@@ -1,8 +1,14 @@
 import React from 'react';
 import { Container } from './styles';
+interface Props {
+  title: string;
+  cover: string | null | undefined;
+  content: string;
+  category: string | null | undefined;
+}
 
-const Card: React.FC = () => {
-  return <Container />;
+const Card = ({ title, cover, category, content }: Props) => {
+  return <Container></Container>;
 };
 
 export default Card;

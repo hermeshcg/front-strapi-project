@@ -15,7 +15,6 @@ export const Container = styled.div`
     margin: 20px;
     justify-content: center;
     background: #ddd;
-    text-decoration: none;
     img {
       width: 100%;
       height: 150px;

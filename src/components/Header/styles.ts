@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 0px 32px;
   background-color: #36454f;
-
+  position: absolute;
   h1 {
     color: #eee;
     margin: 8px 0 !important;
@@ -23,5 +23,6 @@ export const Container = styled.div`
   }
   .sign-in-btn:hover {
     background-color: #ccc;
+    cursor: pointer;
   }
 `;
