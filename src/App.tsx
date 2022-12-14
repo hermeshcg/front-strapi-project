@@ -1,10 +1,11 @@
 import Routes from './routes';
 import GlobalStyle from './styles/Global';
 import { ToastContainer, Bounce } from 'react-toastify';
+import { AuthProvider } from './context/Auth';
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <GlobalStyle />
       <ToastContainer
         autoClose={3500}
@@ -13,7 +14,7 @@ function App() {
         transition={Bounce}
       />
       <Routes />
-    </>
+    </AuthProvider>
   );
 }
 

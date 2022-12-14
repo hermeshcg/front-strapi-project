@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
 import { Container } from './styles';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/Auth';
 
 const Login: React.FC = () => {
   const [form, setForm] = useState({ identifier: '', password: '' });
   const navigate = useNavigate();
+  const { setLogged } = useContext<any>(AuthContext);
 
   function login() {
     console.log(form);

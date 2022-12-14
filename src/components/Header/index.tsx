@@ -24,9 +24,14 @@ const Header: React.FC = () => {
       </div>
       <div>
         {isLogged ? (
-          <Link to="/" onClick={logout} className="sign-in-btn">
-            Sign out
-          </Link>
+          <>
+            <Link to="/" onClick={logout} className="sign-in-btn">
+              Admin
+            </Link>
+            <Link to="/" onClick={logout} className="sign-in-btn">
+              Sign out
+            </Link>
+          </>
         ) : (
           <Link to="/login" className="sign-in-btn">
             Sign in
