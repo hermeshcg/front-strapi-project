@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsFillImageFill } from 'react-icons/bs';
-
 import { Container } from './styles';
 
 interface Props {

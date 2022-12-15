@@ -14,7 +14,7 @@ export const Container = styled.div`
     height: 250px;
     margin: 20px;
     justify-content: center;
-    background: #ddd;
+    background: #fefefe;
     img {
       width: 100%;
       height: 150px;
@@ -41,6 +41,6 @@ export const Container = styled.div`
     transition: transform 0.2s;
   }
   .post-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 `;

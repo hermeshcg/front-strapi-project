@@ -4,10 +4,8 @@ import Home from '../Pages/Home';
 import Login from '../Pages/Login';
 import Post from '../Pages/Post';
 import HomeAdmin from '../Pages/Admin/Home';
-import CategoryAdmin from '../Pages/Admin/Category';
+import CategoryAdmin from '../Pages/Admin/Categories';
 import PostsAdmin from '../Pages/Admin/Posts';
-import { useContext } from 'react';
-import { AuthContext } from '../context/Auth';
 
 function Router() {
   // const { logged } = useContext<any>(AuthContext);
@@ -17,7 +15,7 @@ function Router() {
       <Route path="/post/:id" element={<Post />} />
       <Route path="/admin" element={<HomeAdmin />} />
       <Route path="/admin/posts" element={<PostsAdmin />} />
-      <Route path="/admin/category" element={<CategoryAdmin />} />
+      <Route path="/admin/categories" element={<CategoryAdmin />} />
       <Route path="/login" element={<Login />} />
     </Routes>
   );

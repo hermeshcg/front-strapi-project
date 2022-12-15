@@ -46,7 +46,6 @@ const Home: React.FC = () => {
     <>
       <Header />
       <Container>
-        <h1>POSTS</h1>
         {!isLoading ? (
           <div className="posts-container">
             {posts!.map((post) => (

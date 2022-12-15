@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -8,21 +8,9 @@ export const Container = styled.div`
   padding: 0px 32px;
   background-color: #36454f;
   position: absolute;
+  box-shadow: 0 1px 1px #000;
   h1 {
     color: #eee;
     margin: 8px 0 !important;
-  }
-
-  .sign-in-btn {
-    color: #111;
-    text-decoration: none;
-    background-color: #ddd;
-    border-radius: 50px;
-    padding: 8px;
-    transition: 0.5s;
-  }
-  .sign-in-btn:hover {
-    background-color: #ccc;
-    cursor: pointer;
   }
 `;

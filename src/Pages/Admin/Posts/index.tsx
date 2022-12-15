@@ -8,7 +8,7 @@ const Posts: React.FC = () => {
     <>
       <Header />
       <Container>
-        <h1>Olá</h1>
+        <h1>Olá posts</h1>
       </Container>
     </>
   );

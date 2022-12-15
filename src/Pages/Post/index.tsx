@@ -56,8 +56,6 @@ const Posts: React.FC = () => {
     return;
   }, [id]);
 
-  console.log('post', post);
-
   return (
     <>
       <Header />

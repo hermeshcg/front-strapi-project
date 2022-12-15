@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Nav from '../Nav';
 import { Container } from './styles';
 
 const Header: React.FC = () => {
-  const isLogged = sessionStorage.getItem('@isLogged') === 'true';
-  function logout() {
-    sessionStorage.clear();
-  }
   return (
     <Container>
       <div
@@ -23,20 +20,7 @@ const Header: React.FC = () => {
         </Link>
       </div>
       <div>
-        {isLogged ? (
-          <>
-            <Link to="/" onClick={logout} className="sign-in-btn">
-              Admin
-            </Link>
-            <Link to="/" onClick={logout} className="sign-in-btn">
-              Sign out
-            </Link>
-          </>
-        ) : (
-          <Link to="/login" className="sign-in-btn">
-            Sign in
-          </Link>
-        )}
+        <Nav />
       </div>
     </Container>
   );

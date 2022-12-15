@@ -8,7 +8,7 @@ const Category: React.FC = () => {
     <>
       <Header />
       <Container>
-        <h1>Olá</h1>
+        <h1>Olá categorias</h1>
       </Container>
     </>
   );
