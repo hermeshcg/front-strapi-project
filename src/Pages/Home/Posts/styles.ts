@@ -34,7 +34,7 @@ export const Container = styled.div`
     }
     span {
       padding-bottom: 10px;
-      color: #333;
+      color: #aaafa0;
       align-self: flex-start;
       margin-left: 16px;
     }

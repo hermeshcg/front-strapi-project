@@ -1,10 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding: 0px 32px;
   background-color: #36454f;
   position: absolute;

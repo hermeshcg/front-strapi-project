@@ -14,8 +14,9 @@ export const Container = styled.div`
   span {
     margin: 8px 0;
     border: 1px solid #444;
-    padding: 4px 8px;
-    border-radius: 16px;
+    padding: 4px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
     background-color: #fefefe;
   }
   h1 {
