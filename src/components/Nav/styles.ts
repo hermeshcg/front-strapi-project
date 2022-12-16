@@ -35,15 +35,10 @@ export const Container = styled.div`
     right: 10px;
     box-shadow: 0 1px 1px #ccc;
   }
-  .rotate:hover {
-    animation: spin 0.75s;
+  .nav-btn {
+    transition: 0.5s;
   }
-  @keyframes spin {
-    0% {
-      transform: rotateZ(0deg);
-    }
-    100% {
-      transform: rotateZ(360deg);
-    }
+  .nav-btn:hover {
+    transform: scale(1.1);
   }
 `;

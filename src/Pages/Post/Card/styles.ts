@@ -12,12 +12,10 @@ export const Container = styled.div`
   flex-direction: column;
   border-radius: 16px;
   span {
+    padding-bottom: 10px;
+    color: #aaafa0;
+    align-self: flex-start;
     margin: 8px 0;
-    border: 1px solid #444;
-    padding: 4px;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-    background-color: #fefefe;
   }
   h1 {
     margin: 8px;

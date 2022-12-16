@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         }}
       >
         <Link to="/" style={{ textDecoration: 'none' }}>
-          <h1>Project strapi</h1>
+          <h1>TESTE :)</h1>
         </Link>
       </div>
       <div>

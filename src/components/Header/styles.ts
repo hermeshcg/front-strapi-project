@@ -16,5 +16,9 @@ export const Container = styled.div`
   h1 {
     color: #eee;
     margin: 8px 0 !important;
+    transition: 0.5s;
+  }
+  h1:hover {
+    transform: scale(1.1);
   }
 `;

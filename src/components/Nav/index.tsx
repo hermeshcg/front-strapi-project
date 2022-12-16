@@ -26,11 +26,10 @@ const Nav: React.FC = () => {
   useOutsideAlerter(wrapperRef);
 
   const isLogged = sessionStorage.getItem('@isLogged') === 'true';
-  console.log(`isOpen`, isOpen);
   return (
     <Container>
       <AiOutlineMenu
-        className="rotate"
+        className="nav-btn"
         color="#fff"
         size={26}
         onClick={() => {
@@ -41,6 +40,9 @@ const Nav: React.FC = () => {
         <div className="nav-menu" ref={wrapperRef}>
           {isLogged ? (
             <>
+              <Link to="/" className="default-btn">
+                Home
+              </Link>
               <Link to="/admin" className="default-btn">
                 Admin
               </Link>
@@ -55,9 +57,14 @@ const Nav: React.FC = () => {
               </Link>
             </>
           ) : (
-            <Link to="/login" className="sign-in-btn">
-              Sign in
-            </Link>
+            <>
+              <Link to="/" className="default-btn">
+                Home
+              </Link>
+              <Link to="/login" className="sign-in-btn">
+                Sign in
+              </Link>
+            </>
           )}
         </div>
       ) : null}
