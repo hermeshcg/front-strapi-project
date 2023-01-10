@@ -34,6 +34,7 @@ const Posts: React.FC = () => {
         <Card>
           <>
             <h2>Posts</h2>
+            <h2>Posts</h2>
             <Table
               th={['ID', 'Title', 'Created At', 'Updated At', 'Published At']}
             >
